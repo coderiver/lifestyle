@@ -10,6 +10,7 @@
 		background: #262E31
 
 .logo
+	margin-right: 20px
 	font-size: 44px
 	color: #262E31
 	line-height: 1
@@ -33,16 +34,18 @@
 		+vertical
 		i
 			display: inline-block
-			font-size: 13px
+			font-size: 15px
 			color: #BFBFBF
 			vertical-align: middle
 			+transition(all 0.2s ease)
+		.icon-vk
+			font-size: 14px
 		.icon-ok
 			font-size: 15px
-		.icon-smile
-			font-size: 11px
 		.icon-insta
 			font-size: 14px
+		.icon-smile
+			font-size: 11px
 		&:last-child
 			margin-right: 0
 		&:hover
@@ -64,12 +67,36 @@
 		display: inline-block
 		vertical-align: middle
 		+clr
+		li
+			&:last-child
+				.nav__link
+					margin-right: 0
 	.nav__link
 		margin-right: 28px
 		font-size: 16px
 		color: #ADADAD
 		&:hover
 			color: #FFF
+	+r(768)
+		.nav__link,
+		.nav__ico
+			margin-right: 15px
+	+r(480)
+		float: none
+		.nav__ico
+			width: 10%
+			margin: 0
+		.nav__list
+			width: 90%
+			li
+				float: none
+				display: inline-block
+				padding: 5px 0
+				&:last-child
+					.nav__link
+						margin-right: 10px
+		.nav__link
+			margin: 0 10px
 
 .header__search
 	.input
@@ -82,6 +109,15 @@
 		right: 15px
 		font-size: 16px
 		color: #BFBFBF
+	+r(640)
+		.input
+			width: 100%
+			max-width: 160px
+	+r(480)
+		float: none
+		.input
+			max-width: 300px
+			margin-top: 15px
 
 .header__submenu
 	padding: 10px 0
@@ -107,7 +143,11 @@
 			color: #4D4D4D
 			&:before
 				width: 100%
-
+	+r(480)
+		.submenu__link
+			margin: 5px 10px
+			&:before
+				display: none
 
 //main
 .content
@@ -119,9 +159,14 @@
 		background: #ffffff
 		+box-shadow(0 1px 2px rgba(0, 1, 1, 0.16))
 		+box
+	+r(480)
+		.content__in
+			padding: 35px 5px 70px
 
 .item-wrap
 	font-size: 0
+	+r(640)
+		text-align: center
 
 .item
 	display: inline-block
@@ -129,6 +174,7 @@
 	height: 430px
 	margin-bottom: 30px
 	padding: 0 15px
+	text-align: left
 	font-size: 14px
 	vertical-align: top
 	+box
@@ -141,19 +187,17 @@
 			color: #223032
 		.item__desc
 			height: 45px
-	&.with-banner
-		.item__img
-			height: 100%
-			-webkit-background-size: contain
-			-o-background-size: contain
-			background-size: contain
-			background-position: 0 0
 	.item__in
+		height: 100%
 		background: #F1F1F1
 	.item__img
 		height: 170px
 		margin-bottom: 10px
 		+cover
+		img
+			display: block
+			max-width: 100%
+			margin: 0 auto
 	.item__category
 		margin-bottom: 5px
 		+clr
@@ -171,7 +215,7 @@
 		line-height: 1.2
 		color: #223032
 		+opsemi
-		&:hover
+		&:hover, &:active
 			text-decoration: underline
 	.item__txt
 		color: #7a7a7a
@@ -188,13 +232,31 @@
 			.item__img
 				height: 170px
 			.item__txt
-				padding: 0 10px 20px
+				padding: 0 10px
+		.item__in
+			height: auto
+			padding-bottom: 20px
 		.item__ttl
 			font-size: 18px
+	+r(768)
+		width: 50%
+		height: auto
+		&.is-double-width
+			width: 50%
+			.item__desc
+				height: 90px
+	+r(640)
+		width: 100%
+		max-width: 400px
+		&.is-double-width
+			width: 100%
 
+//show more button
 .button-wrap
 	margin-top: 75px
 	text-align: center
+	+r(1000)
+		margin-top: 15px
 
 .button
 	padding: 15px 45px
@@ -291,6 +353,26 @@
 			margin: 15px 20px 15px 0
 		.counters
 			margin-top: 15px
+	+r(640)
+		.footer__copy
+			text-align: center
+			.footer__link
+				display: block
+				margin: 10px 0
+		.footer__list
+			text-align: center
+			li
+				float: none
+		.footer__link
+			display: inline-block
+			margin-bottom: 5px
+		.social
+			float: none
+			text-align: center
+			margin-right: 0
+	+r(480)
+		.footer__copyright
+			padding-bottom: 20px
 
 .counters
 	font-size: 0
@@ -312,3 +394,12 @@
 		width: 88px
 		height: 31px
 		background: url(../img/counter1.jpg) no-repeat
+	+r(640)
+		float: none
+		text-align: center
+		a
+			&:last-child
+				margin-right: 15px
+	+r(480)
+		a
+			margin: 10px 15px
