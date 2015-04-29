@@ -1,44 +1,44 @@
 // # SHORT HOWTO
 // ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
+//		 .whatever
+//					+sized-sprite($icons, coderiver) //or
 // 			+s(codedby) //gets default value for spritemap as $icons
 // ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
+//		 +include keyframes(rotate)
+//				from
+//					 +rotate(0)
+//				to
+//					 +rotate(360)
 // ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
+//		 body:hover
+// 			+animation(rotate 200s linear infinite)
 // ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
+//		 transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
+//		 +background-image(linear-gradient(#232323, #5c5c5c));
+//		 +g(#232323, #5c5c5c);
+//		 horizontal
+//		 +gh(#232323, #5c5c5c);
 // ## making bw-images
-//     img
+//		 img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+//		 +min-screen(320)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
+//		 @for $i from 1 through 3
+//			 .item-#{$i}
 //			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+//		 @each $s in a,b,c
+// 				#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -48,119 +48,86 @@
 // 	+jpg(bla)
 
 
+//fonts
++font(opensans, opensans)
++font(opensans-semibold, opensans-semibold)
++font(opensans-bold, opensans-bold)
++font(niconne, niconne)
++font(custom, custom)
+
+=ops
+	font-family: "opensans", Arial, sans-serif
+=opsemi
+	font-family: "opensans-semibold", Arial, sans-serif
+=opsb
+	font-family: "opensans-bold", Arial, sans-serif
+=n
+	font-family: "niconne", Arial, sans-serif
+
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-size: 12px
 	line-height: 1.4
-
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	background: #ffffff
+	+ops
+
+
+// common blocks
+.out
+	min-width: 320px
+	a
+		text-decoration: none
+
+.onleft
+	float: left
+.onright
+	float: right
+
+input
+	display: block
+	width: 100%
+	padding: 5px 35px 5px 20px
+	border-radius: 10px
+	+box
+
+//svg icons
+[class^="icon-"]:before,
+[class*=" icon-"]:before
+	font-family: "custom"
+	font-style: normal
+	font-weight: normal
+	speak: none
+	display: inline-block
+	text-decoration: inherit
+	width: 1em
+	margin-right: .2em
+	text-align: center
+	font-variant: normal
+	text-transform: none
+	line-height: 1em
+	margin-left: .2em
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon-smile:before
+	content: '\e800'
+
+.icon-search:before
+	content: '\e801'
+
+.icon-vk:before
+	content: '\e802'
+
+.icon-twitter:before
+	content: '\e808'
+
+.icon-ok:before
+	content: '\e804'
+
+.icon-insta:before
+	content: '\e805'
+
+.icon-fb:before
+	content: '\e806'
+
+.icon-menu:before
+	content: '\e807'
