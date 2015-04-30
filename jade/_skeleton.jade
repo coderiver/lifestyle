@@ -40,22 +40,23 @@ html
 								li.onleft
 									a(href="#").nav__link Авто
 						.header__search.onright
-							label.input
-								input(type="text")
-								i.icon-search
+							form
+								label.input
+									input(type="text")
+									button(type="send").icon-search
 				.header__submenu
 					.l-center
 						ul.submenu__list
 							li.onleft
-								a(href="#").submenu__link Еда
+								span.submenu__link Еда
 							li.onleft
-								a(href="#").submenu__link Одежда
+								span.submenu__link.is-active Одежда
 							li.onleft
-								a(href="#").submenu__link Здоровье
+								span.submenu__link Здоровье
 							li.onleft
-								a(href="#").submenu__link Дом
+								span.submenu__link Дом
 							li.onleft
-								a(href="#").submenu__link Развлечения
+								span.submenu__link Развлечения
 
 				block content
 				footer.footer
@@ -101,7 +102,8 @@ html
 								.footer__copyright
 									.footer__copy.onleft
 										p © 2005—2014 Медиахолдинг PrimaMedia
-										a(href="#").footer__link Разработка сайта - ЦРТ
+										a(href="#").footer__link
+											span Разработка сайта - ЦРТ
 									.counters.onright
 										a(href="#").counter__yandex
 										a(href="#").counter__mail

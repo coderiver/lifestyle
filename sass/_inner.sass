@@ -1,9 +1,9 @@
 //inner contrnt
 .inner
+	display: table
 	padding-right: 30px
-	font-size: 14px
+	font-size: 16px
 	color: #223032
-	overflow: hidden
 	+box
 	p
 		margin-bottom: 25px
@@ -18,11 +18,14 @@
 		+cover
 	.inner__ttl
 		position: absolute
-		left: 30px
-		bottom: 35px
-		max-width: 65%
+		left: 25px
+		bottom: 25px
+		max-width: 68%
+		padding: 10px
 		font-size: 16px
 		color: #FFF
+		background: rgba(#000, 0.4)
+		+box
 		h2
 			text-transform: uppercase
 			font-size: 44px
@@ -68,17 +71,22 @@
 	+r(1000)
 		.inner__ttl
 			font-size: 14px
+			max-width: inherit
+			right: 25px
 			h2
 				font-size: 35px
 			h4
 				font-size: 15px
 	+r(768)
 		padding-right: 0
+		.inner__ttl
+			h2
+				font-size: 30px
 	+r(640)
 		.inner__ttl
 			left: 15px
+			right: 15px
 			bottom: 15px
-			max-width: inherit
 		.img-wrap
 			display: block
 			width: 100%
@@ -90,8 +98,11 @@
 				margin: 0 auto
 	+r(480)
 		.inner__bl-ttl
-			height: 350px
+			height: 400px
 		.inner__ttl
+			left: 0
+			right: 0
+			bottom: 0
 			h2
 				font-size: 25px
 		.inner__social
@@ -125,27 +136,42 @@
 
 //sidebar
 .sidebar
+	position: relative
 	width: 32%
+	height: 100%
 	max-width: 280px
 	min-width: 205px
 	+clr
+	.js-sidebar
+		position: relative
+		&.is-fixed
+			position: fixed
+			top: 0
+			margin-top: 15px
+		&.is-absolute
+			position: absolute
 	.sidebar__img
 		img
 			max-width: 100%
-	.button
+	.comment
+		display: block
 		width: 100%
-		margin-bottom: 65px
-		padding: 12px 0
-		background-color: #53CDBD
-		border-radius: 5px
+		margin-bottom: 60px
+		padding: 20px 0 15px
+		text-align: center
+		text-transform: uppercase
 		font-size: 20px
 		color: #ffffff
+		line-height: 1
+		background-color: #53CDBD
+		border-radius: 5px
 		border: none
 		+box-shadow(0 2px 0 #4abaab)
 		+box
 		+opsemi
 	+r(768)
 		width: 100%
+		height: auto
 		float: none
 		margin: 0 auto
 		.sidebar__img
@@ -154,7 +180,7 @@
 .date
 	position: relative
 	max-width: 275px
-	margin-bottom: 30px
+	margin-bottom: 40px
 	text-align: center
 	font-size: 24px
 	color: #262E31
