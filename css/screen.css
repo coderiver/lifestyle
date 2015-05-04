@@ -111,7 +111,7 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
   .header__submenu .submenu__link:before { display: none; } }
 
 .content { display: block; padding: 44px 5px 58px; background: #ebebe8; }
-.content .content__in { padding: 35px 20px 70px; background: white; -moz-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); -webkit-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
+.content .content__in { position: relative; padding: 35px 20px 70px; background: white; -moz-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); -webkit-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); box-shadow: 0 1px 2px rgba(0, 1, 1, 0.16); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
 .content .content__in:after { content: " "; display: table; clear: both; }
 .content .content__in.for-inner { padding: 35px 35px 10px; }
 @media only screen and (max-width: 480px) { .content { padding: 44px 0 58px; }
@@ -245,9 +245,7 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
 
 .sidebar { position: relative; width: 32%; height: 100%; max-width: 280px; min-width: 205px; *zoom: 1; }
 .sidebar:after { content: " "; display: table; clear: both; }
-.sidebar .js-sidebar { position: relative; }
-.sidebar .js-sidebar.is-fixed { position: fixed; top: 0; margin-top: 15px; }
-.sidebar .js-sidebar.is-absolute { position: absolute; }
+.sidebar .js-sidebar { position: static; }
 .sidebar .sidebar__img img { max-width: 100%; }
 .sidebar .comment { display: block; width: 100%; margin-bottom: 60px; padding: 20px 0 15px; text-align: center; text-transform: uppercase; font-size: 20px; color: white; line-height: 1; background-color: #53cdbd; border-radius: 5px; border: none; -moz-box-shadow: 0 2px 0 #4abaab; -webkit-box-shadow: 0 2px 0 #4abaab; box-shadow: 0 2px 0 #4abaab; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "opensans-semibold", Arial, sans-serif; }
 @media only screen and (max-width: 768px) { .sidebar { width: 100%; height: auto; float: none; margin: 0 auto; }
