@@ -1,16 +1,51 @@
 //header
 .header
-	.header__in,
-	.header__nav
-		+clr
 	.header__in
 		padding: 15px 0
-	.header__nav
-		padding: 15px 0
-		background: #262E31
+		+clr
 	+r(480)
 		.header__in
 			text-align: center
+
+.header__nav
+	padding: 15px 0
+	background: #262E31
+	+clr
+	.logo
+		display: none
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		padding: 9px 0
+		z-index: 5
+		.logo
+			display: block
+			font-size: 40px
+			color: #FFF
+		.nav
+			margin-top: 9px
+		.header__search
+			display: none
+	+r(480)
+		&.is-fixed
+			.logo
+				float: right
+			.nav
+				position: relative
+				float: left
+				text-align: left
+			.nav__list
+				display: none
+				&.is-visible
+					display: block
+					position: absolute
+			.nav__link
+				&:first-child
+					margin-left: 0
+			.nav__ico
+				width: auto
 
 .logo
 	font-size: 44px
@@ -204,10 +239,16 @@
 			color: #223032
 		.item__desc
 			height: 45px
+	&.with-banner
+		.item__img
+			height: auto
+			img
+				min-height: 170px
 	.item__in
 		height: 100%
 		background: #F1F1F1
 	.item__img
+		display: block
 		height: 170px
 		margin-bottom: 10px
 		+cover
@@ -222,6 +263,8 @@
 		text-transform: uppercase
 		color: #D0464E
 		font-size: 12px
+		&:hover
+			text-decoration: underline
 	.item__date
 		font-size: 13px
 		color: #ADADAD
@@ -250,6 +293,9 @@
 				height: 170px
 			.item__txt
 				padding: 0 10px
+		&.with-banner
+			.item__img
+				height: auto
 		.item__in
 			height: auto
 			padding-bottom: 20px
@@ -267,6 +313,7 @@
 		max-width: 400px
 		&.is-double-width
 			width: 100%
+
 
 //show more button
 .button-wrap

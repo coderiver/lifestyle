@@ -56,11 +56,23 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
 
 .l-center { max-width: 1320px; padding: 0 20px; margin: 0 auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.header .header__in, .header .header__nav { *zoom: 1; }
-.header .header__in:after, .header .header__nav:after { content: " "; display: table; clear: both; }
-.header .header__in { padding: 15px 0; }
-.header .header__nav { padding: 15px 0; background: #262e31; }
+.header .header__in { padding: 15px 0; *zoom: 1; }
+.header .header__in:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 480px) { .header .header__in { text-align: center; } }
+
+.header__nav { padding: 15px 0; background: #262e31; *zoom: 1; }
+.header__nav:after { content: " "; display: table; clear: both; }
+.header__nav .logo { display: none; }
+.header__nav.is-fixed { position: fixed; top: 0; left: 0; right: 0; padding: 9px 0; z-index: 5; }
+.header__nav.is-fixed .logo { display: block; font-size: 40px; color: white; }
+.header__nav.is-fixed .nav { margin-top: 9px; }
+.header__nav.is-fixed .header__search { display: none; }
+@media only screen and (max-width: 480px) { .header__nav.is-fixed .logo { float: right; }
+  .header__nav.is-fixed .nav { position: relative; float: left; text-align: left; }
+  .header__nav.is-fixed .nav__list { display: none; }
+  .header__nav.is-fixed .nav__list.is-visible { display: block; position: absolute; }
+  .header__nav.is-fixed .nav__link:first-child { margin-left: 0; }
+  .header__nav.is-fixed .nav__ico { width: auto; } }
 
 .logo { font-size: 44px; color: #262e31; line-height: 1; font-family: "niconne", Arial, sans-serif; }
 .logo span { color: #d41111; }
@@ -127,12 +139,15 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
 .item.is-double-width .item__img { height: 300px; }
 .item.is-double-width .item__txt { padding: 0 30px; color: #223032; }
 .item.is-double-width .item__desc { height: 45px; }
+.item.with-banner .item__img { height: auto; }
+.item.with-banner .item__img img { min-height: 170px; }
 .item .item__in { height: 100%; background: #f1f1f1; }
-.item .item__img { height: 170px; margin-bottom: 10px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.item .item__img { display: block; height: 170px; margin-bottom: 10px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .item .item__img img { display: block; max-width: 100%; margin: 0 auto; }
 .item .item__category { margin-bottom: 5px; *zoom: 1; }
 .item .item__category:after { content: " "; display: table; clear: both; }
 .item .item__category-name { text-transform: uppercase; color: #d0464e; font-size: 12px; }
+.item .item__category-name:hover { text-decoration: underline; }
 .item .item__date { font-size: 13px; color: #adadad; }
 .item .item__ttl { display: block; margin-bottom: 10px; font-size: 20px; line-height: 1.2; color: #223032; font-family: "opensans-semibold", Arial, sans-serif; }
 .item .item__ttl:hover, .item .item__ttl:active { text-decoration: underline; }
@@ -142,6 +157,7 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
   .item.is-double-width { width: 33%; }
   .item.is-double-width .item__img { height: 170px; }
   .item.is-double-width .item__txt { padding: 0 10px; }
+  .item.with-banner .item__img { height: auto; }
   .item .item__in { height: auto; padding-bottom: 20px; }
   .item .item__ttl { font-size: 18px; } }
 @media only screen and (max-width: 768px) { .item { width: 50%; height: auto; }
@@ -239,8 +255,7 @@ input { display: block; width: 100%; padding: 5px 35px 5px 20px; border-radius: 
 .publication h2 { font-size: 24px; margin-bottom: 20px; color: #223032; font-family: "opensans-semibold", Arial, sans-serif; }
 .publication .item-wrap { margin: 0 -15px; }
 .publication .item { width: 33%; height: auto; }
-@media only screen and (max-width: 768px) { .publication .item-wrap { text-align: left; }
-  .publication .item { width: 50%; } }
+@media only screen and (max-width: 1000px) { .publication .item { width: 50%; } }
 @media only screen and (max-width: 640px) { .publication .item { width: 100%; margin-bottom: 0; } }
 
 .sidebar { position: relative; width: 32%; height: 100%; max-width: 280px; min-width: 205px; *zoom: 1; }

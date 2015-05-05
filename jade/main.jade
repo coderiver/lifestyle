@@ -1,4 +1,5 @@
 extend _skeleton.jade
+extend _skeleton.jade
 
 block title
 	title main
@@ -10,179 +11,179 @@ block content
 				.item-wrap
 					.item.is-double-width
 						.item__in
-							.item__img(style="background-image: url(img/item1.jpg)")
+							a(href="#").item__img(style="background-image: url(img/item1.jpg)")
 							.item__txt
 								.item__category
-									.item__category-name.onleft Одежда
+									a(href="#").item__category-name.onleft Одежда
 									.item__date.onright 23 февраля
 								a(href="#").item__ttl Тест-драйв одежды для бега
 								p.item__desc
 									Саша Сколков протестировал беговую экипировку Nike, adidas и Reebok и составил несколько собственных комплектов для любой погоды
 					.item
-						.item__img(style="background-image: url(img/item2.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item2.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Одежда
+								a(href="#").item__category-name.onleft Одежда
 								.item__date.onright 23 февраля
 							a(href="#").item__ttl Воспоминания о Немцове, анализ русской деревни и «селфи» на языке жестов
 							p.item__desc
 								Одни тратят большую часть зарплаты на дорогие сумки и обувь, другие принципиально носят масс-маркет и не готовы инвестировать внуши- тельные суммы
 					.item
-						.item__img(style="background-image: url(img/item3.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item3.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Здоровье
+								a(href="#").item__category-name.onleft Здоровье
 								.item__date.onright 23 февраля
 							a(href="#").item__ttl Как восстановить поджелудочную железу?
 							p.item__desc
 								Поджелудочная железа является одним из самых важных органов пищеварительной системы человека. Она выполняет функцию внешней и внутренней секреции.
 					.item
-						.item__img(style="background-image: url(img/item4.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item4.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Одежда
+								a(href="#").item__category-name.onleft Одежда
 								.item__date.onright 20 февраля
 							a(href="#").item__ttl Стилист Юля Катькало — о том, как одеваться зимой
 							p.item__desc
 								Стилист Юля Катькало рассказала о том, как правильно выбирать зимнюю обувь, составлять комплекты на каждый день...
 					.item
-						.item__img(style="background-image: url(img/item5.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item5.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Еда
+								a(href="#").item__category-name.onleft Еда
 								.item__date.onright 12 февраля
 							a(href="#").item__ttl 6 ресторанов, открывшихся в декабре
 							p.item__desc
 								Buddha Bar, новый большой проект Ginza Project, кафе-бар с хорошими обедами
 					.item
-						.item__img(style="background-image: url(img/item6.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item6.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Здоровье
+								a(href="#").item__category-name.onleft Здоровье
 								.item__date.onright 10 февраля
 							a(href="#").item__ttl Ответственные лица: Косметологи советуют мужчинам, как ухаживать за кожей
 							p.item__desc
 								На примере известных политиков — Владимира Путина, Игоря Сечина, Вячеслава Володина и других
-					.item
+					.item.with-banner
 						a(href="#").item__img
 							img(src="img/banner2.jpg" alt="banner2")
 					.item
-						.item__img(style="background-image: url(img/item7.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item7.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Развлечения
+								a(href="#").item__category-name.onleft Развлечения
 								.item__date.onright 8 февраля
 							a(href="#").item__ttl «Фокус» Гленна Фикарры и Джона Рекуа
 							p.item__desc
 								Уилл Смит примеряет на себя амплуа опытного мошенника, который преподает молодой красавице уроки мелких краж и больших надувательств.
 					.item
-						.item__img(style="background-image: url(img/item8.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item8.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Одежда
+								a(href="#").item__category-name.onleft Одежда
 								.item__date.onright 5 февраля
 							a(href="#").item__ttl Зачем идти в Uniqlo за коллекцией Инес де Ла Фрессанж
 							p.item__desc
 								Твидовые жакеты, простые тренчи, вельветовые брюки, удлиненные пиджаки, рубашки в цветочек.
 					.item
-						.item__img(style="background-image: url(img/item9.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item9.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Дом
+								a(href="#").item__category-name.onleft Дом
 								.item__date.onright 27 января
 							a(href="#").item__ttl Обустроить квартиру для двоих: 10 рекомендаций
 							p.item__desc
 								Семья дизайнеров, основываясь на собственном опыте, даёт советы насчёт правильного освещения для романтических ужинов и зеркал в спальне
 					.item
-						.item__img(style="background-image: url(img/item10.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item10.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Еда
+								a(href="#").item__category-name.onleft Еда
 								.item__date.onright 24 января
 							a(href="#").item__ttl Новое место: Кафе Doodles
 							p.item__desc
 								Кафе открыли супруги Галя и Евгений Денисовы, и это их первый опыт в ресторанном бизнесе.
 					.item
-						.item__img(style="background-image: url(img/item11.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item11.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Дом
+								a(href="#").item__category-name.onleft Дом
 								.item__date.onright 8 февраля
 							a(href="#").item__ttl Задели за жилое: Анастасия Каримова о моде на апартаменты
 							p.item__desc
 								Корреспондент журнала «Коммерсант. Деньги» Анастасия Каримова рассуждает о том, чем опасна мода
 					.item
-						.item__img(style="background-image: url(img/item12.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item12.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Еда
+								a(href="#").item__category-name.onleft Еда
 								.item__date.onright 5 февраля
 							a(href="#").item__ttl 7 приложений для доставки еды
 							p.item__desc
 								Одно из самых популярных приложений для доставки еды, Delivery Club работает с огромным количеством ресторанов и магазинов, всего их в приложении 1 746.
 					.item.is-double-width
 						.item__in
-							.item__img(style="background-image: url(img/item13.jpg)")
+							a(href="#").item__img(style="background-image: url(img/item13.jpg)")
 							.item__txt
 								.item__category
-									.item__category-name.onleft Еда
+									a(href="#").item__category-name.onleft Еда
 									.item__date.onright 23 февраля
 								a(href="#").item__ttl Чем кормят сотрудников московских компаний
 								p.item__desc
 									Чем питаются работники «Билайна», «Яндекса», Mail.Ru Group и других известных компаний
 					.item
-						.item__img(style="background-image: url(img/item14.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item14.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Дом
+								a(href="#").item__category-name.onleft Дом
 								.item__date.onright 8 февраля
 							a(href="#").item__ttl Задели за жилое: Анастасия Каримова о моде на апартаменты
 							p.item__desc
 								Корреспондент журнала «Коммерсант. Деньги» Анастасия Каримова рассуждает о том, чем опасна мода
 					.item
-						.item__img(style="background-image: url(img/item15.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item15.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Развлечения
+								a(href="#").item__category-name.onleft Развлечения
 								.item__date.onright 8 февраля
 							a(href="#").item__ttl Фильм недели «Книга жизни»
 							p.item__desc
 								Красочный мультфильм, сюжет которого слегка напоминает «Труп невесты»: двое влюблённых пытаются воссоединиться в стране мёртвых. Продюсер — Гильермо дель Торо.
 					.item
-						.item__img(style="background-image: url(img/item16.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item16.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Развлечения
+								a(href="#").item__category-name.onleft Развлечения
 								.item__date.onright 27 января
 							a(href="#").item__ttl Новые виниловые пластинки, украсят любую коллекцию
 							p.item__desc
 								Для тех, кто хочет подарить подарок со смыслом, но не хочет тратить огромную сумму, предлагаем рассмотреть в качестве варианта винил
 					.item
-						.item__img(style="background-image: url(img/item17.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item17.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Здоровье
+								a(href="#").item__category-name.onleft Здоровье
 								.item__date.onright 24 января
 							a(href="#").item__ttl Нарушения осанки: тестируем и исправляем
 							p.item__desc
 								На самом деле позвоночник не должен быть абсолютно прямым: в норме он имеет волнообразную форму. Его физиологические изгибы играют роль амортизаторов
-					.item.is-double-width
+					.item.is-double-width.with-banner
 						a(href="#").item__img
 							img(src="img/banner.jpg" alt="banner")
 					.item
-						.item__img(style="background-image: url(img/item18.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item18.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Еда
+								a(href="#").item__category-name.onleft Еда
 								.item__date.onright 27 января
 							a(href="#").item__ttl Тайваньский салат с курицей, овощами и кунжутным соусом
 							p.item__desc
 								Шеф-повар ресторана «Китайские новости» Сергей Югай готовит традиционное тайваньское блюдо в его авторской интерпретации
 					.item
-						.item__img(style="background-image: url(img/item19.jpg)")
+						a(href="#").item__img(style="background-image: url(img/item19.jpg)")
 						.item__txt
 							.item__category
-								.item__category-name.onleft Дом
+								a(href="#").item__category-name.onleft Дом
 								.item__date.onright 24 января
 							a(href="#").item__ttl Алина Вострикова — о 5 видах декора, который всем надоел
 							p.item__desc
