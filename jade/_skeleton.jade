@@ -10,23 +10,24 @@ html
 			title template
 	body
 		.out
+			//BEGIN HEADER
 			header.header
 				.l-center
 					.header__in
 						a(href="#").logo.onleft
 							| Life<span>style</span>
 						.social.onright
-							a(href="#").social__ico
+							a(href="#").social__ico.vk-ico
 								i.icon-vk
-							a(href="#").social__ico
+							a(href="#").social__ico.fb-ico
 								i.icon-fb
-							a(href="#").social__ico
+							a(href="#").social__ico.twitter-ico
 								i.icon-twitter
-							a(href="#").social__ico
+							a(href="#").social__ico.ok-ico
 								i.icon-ok
-							a(href="#").social__ico
+							a(href="#").social__ico.insta-ico
 								i.icon-insta
-							a(href="#").social__ico
+							a(href="#").social__ico.smile-ico
 								i.icon-smile
 				.header__nav.js-wrap
 					.l-center
@@ -50,66 +51,67 @@ html
 					.l-center
 						ul.submenu__list
 							li.onleft
-								span.submenu__link Еда
+								a(href="#").submenu__link Еда
 							li.onleft
-								span.submenu__link.is-active Одежда
+								a(href="#").submenu__link.is-active Одежда
 							li.onleft
-								span.submenu__link Здоровье
+								a(href="#").submenu__link Здоровье
 							li.onleft
-								span.submenu__link Дом
+								a(href="#").submenu__link Дом
 							li.onleft
-								span.submenu__link Развлечения
-
-				block content
-				footer.footer
-					.footer__top
-						.l-center
-							.footer__in
-								ul.footer__list.onleft
-									li.onleft
-										a(href="#").footer__link О нас
-									li.onleft
-										a(href="#").footer__link Вакансии
-									li.onleft
-										a(href="#").footer__link Контакты
-									li.onleft
-										a(href="#").footer__link Размещение рекламы
-									li.onleft
-										a(href="#").footer__link Прислать новость или идею
-								.social.onright
-									a(href="#").social__ico
-										i.icon-vk
-									a(href="#").social__ico
-										i.icon-fb
-									a(href="#").social__ico
-										i.icon-twitter
-									a(href="#").social__ico
-										i.icon-ok
-									a(href="#").social__ico
-										i.icon-insta
-									a(href="#").social__ico
-										i.icon-smile
-					.footer__bottom
-						.l-center
-							.footer__in
-								.footer__rules
-									p.
-										При перепечатке либо ином использовании текстовых материалов с настоящего сайта гиперссылка на источник обязательна.
-										Фотографии, видеоматериалы, иные иллюстрации могут быть использованы только с письменного согласия автора (правообладателя) и с обязательным указанием имени автора и источника заимствования.
-									a(href="#").footer__rules-link Правила сайта
-									p.
-										Отметкой <span class="footer__span">Реклама</span> обозначены рекламные материалы.
-									.footer__restrict.onright
-										span 16+
-								.footer__copyright
-									.footer__copy.onleft
-										p © 2005—2014 Медиахолдинг PrimaMedia
-										a(href="#").footer__link
-											span Разработка сайта - ЦРТ
-									.counters.onright
-										a(href="#").counter__yandex
-										a(href="#").counter__mail
-										a(href="#").counter__rambler
-
+								a(href="#").submenu__link Развлечения
+			//END HEADER
+			block content
+			//BEGIN FOOTER
+			footer.footer
+				.footer__top
+					.l-center
+						.footer__in
+							ul.footer__list.onleft
+								li.onleft
+									a(href="#").footer__link О нас
+								li.onleft
+									a(href="#").footer__link Вакансии
+								li.onleft
+									a(href="#").footer__link Контакты
+								li.onleft
+									a(href="#").footer__link Размещение рекламы
+								li.onleft
+									a(href="#").footer__link Прислать новость или идею
+							.social.onright
+								a(href="#").social__ico.vk-ico
+									i.icon-vk
+								a(href="#").social__ico.fb-ico
+									i.icon-fb
+								a(href="#").social__ico.twitter-ico
+									i.icon-twitter
+								a(href="#").social__ico.ok-ico
+									i.icon-ok
+								a(href="#").social__ico.insta-ico
+									i.icon-insta
+								a(href="#").social__ico.smile-ico
+									i.icon-smile
+				.footer__bottom
+					.l-center
+						.footer__in
+							.footer__rules
+								p.
+									При перепечатке либо ином использовании текстовых материалов с настоящего сайта гиперссылка на источник обязательна.
+									Фотографии, видеоматериалы, иные иллюстрации могут быть использованы только с письменного согласия автора (правообладателя) и с обязательным указанием имени автора и источника заимствования.
+								a(href="#").footer__rules-link Правила сайта
+								p.
+									Отметкой <span class="footer__span">Реклама</span> обозначены рекламные материалы.
+								.footer__restrict.onright
+									span 16+
+							.footer__copyright
+								.footer__copy.onleft
+									p © 2005—2014 Медиахолдинг PrimaMedia
+									a(href="#").footer__link
+										span Разработка сайта - ЦРТ
+								.counters.onright
+									a(href="#").counter__yandex
+									a(href="#").counter__mail
+									a(href="#").counter__rambler
+				//END FOOTER
 
 		script(src="js/lib/head.js", data-headjs-load="js/init.js")

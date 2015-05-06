@@ -4,9 +4,11 @@ block title
 	title inner
 
 block content
+	//BEGIN CONTENT
 	main.content
 		.l-center
 			.content__in.for-inner
+				//BEGIN SIDEBAR
 				.sidebar.onright
 					.js-sidebar
 						.date
@@ -17,6 +19,8 @@ block content
 						a(href="#").comment Комментировать
 						.sidebar__img
 							img(src="img/banner2.jpg" alt="banner2")
+				//END SIDEBAR
+				//BEGIN INNER
 				.inner
 					.inner__bl-ttl(style="background-image: url(img/inner1.jpg)")
 						.inner__ttl
@@ -81,6 +85,7 @@ block content
 						Более заманчивые перспективы, как и большую опасность, таят масс-супермаркеты, где вещи развешаны по типу и ценовым категориям.
 						Таблички «от 299 рублей» чаще означают «от», чем «299», но нельзя сдаваться.
 						Именно в таком мегасторе Ostin я нашла умеренно расклешенные джинсы правильного синего цвета.
+					//BEGIN PUBLICATION
 					.publication
 						h2 Последние публикации
 						.item-wrap
@@ -111,3 +116,5 @@ block content
 									a(href="#").item__ttl Обустроить квартиру для двоих: 10 рекомендаций
 									p.item__desc
 										Семья дизайнеров, основываясь на собственном опыте, даёт советы насчёт правильного освещения для романтических ужинов и зеркал в спальне
+				//END INNER
+	//END CONTENT

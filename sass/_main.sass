@@ -77,6 +77,36 @@
 			color: #BFBFBF
 			vertical-align: middle
 			+transition(all 0.2s ease)
+		&.vk-ico
+			&:hover
+				border-color: #4C75A3
+				.icon-vk
+					color: #4C75A3
+		&.fb-ico
+			&:hover
+				border-color: #3b579d
+				.icon-fb
+					color: #3b579d
+		&.twitter-ico
+			&:hover
+				border-color: #2eacf6
+				.icon-twitter
+					color: #2eacf6
+		&.ok-ico
+			&:hover
+				border-color: #f58939
+				.icon-ok
+					color: #f58939
+		&.insta-ico
+			&:hover
+				border-color: #2a5b83
+				.icon-insta
+					color: #2a5b83
+		&.smile-ico
+			&:hover
+				border-color: #426fb2
+				.icon-smile
+					color: #426fb2
 		.icon-vk
 			font-size: 14px
 		.icon-ok
@@ -186,6 +216,10 @@
 			color: #4D4D4D
 			&:before
 				width: 100%
+		&:hover
+			color: #D0464E
+			&.is-active
+				color: #4D4D4D
 	+r(480)
 		.submenu__link
 			margin: 5px 10px
@@ -242,12 +276,15 @@
 	&.with-banner
 		.item__img
 			height: auto
+			&:before
+				display: none
 			img
 				min-height: 170px
 	.item__in
 		height: 100%
 		background: #F1F1F1
 	.item__img
+		position: relative
 		display: block
 		height: 170px
 		margin-bottom: 10px
@@ -256,6 +293,19 @@
 			display: block
 			max-width: 100%
 			margin: 0 auto
+		&:hover
+			&:before
+				opacity: 0.15
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #000
+			opacity: 0
+			+transition(opacity 0.3s ease)
 	.item__category
 		margin-bottom: 5px
 		+clr
@@ -276,7 +326,7 @@
 		color: #223032
 		+opsemi
 		&:hover, &:active
-			text-decoration: underline
+			color: #D0464E
 	.item__txt
 		color: #7a7a7a
 	.item__desc
@@ -327,10 +377,13 @@
 	text-transform: uppercase
 	font-size: 14px
 	background: none
-	border: 2px solid #262e31
+	border: 2px solid #e0e0e0
 	color: #223032
 	-webkit-tap-highlight-color: transparent
+	+transition(border-color 0.3s ease)
 	+opsemi
+	&:hover
+		border-color: #262e31
 	&:active
 		position: relative
 		top: 0.5px
